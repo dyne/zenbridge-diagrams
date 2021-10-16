@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://zenroom.org/zenbridge">
-    <img alt="Zenbridge" src="https://zenroom.org/wp-content/uploads/2019/12/zenbridge-1024x205.png" width="150" />
+    <img alt="Zenbridge" src="https://zenroom.org/wp-content/uploads/2019/12/zenbridge-1024x205.png" width="450" />
   </a>
 </p>
 
