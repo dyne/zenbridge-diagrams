@@ -1,18 +1,15 @@
 <p align="center">
-  <a href="https://www.dyne.org">
-    <img alt="{project_name}" src="https://via.placeholder.com/150.png?text=LOGO" width="150" />
+  <a href="https://zenroom.org/zenbridge">
+    <img alt="Zenbridge" src="https://zenroom.org/wp-content/uploads/2019/12/zenbridge-1024x205.png" width="150" />
   </a>
 </p>
 
 <h1 align="center">
-  {project_name}</br>
-  <sub>{tagline}</sub>
+  Zenbridge Diagrams</br>
+  <sub>Architectural docs for the project</sub>
 </h1>
 
 <p align="center">
-  <a href="https://travis-ci.com/DECODEproject/{project_name}">
-    <img src="https://travis-ci.com/DECODEproject/{project_name}.svg?branch=master" alt="Build Status">
-  </a>
   <a href="https://dyne.org">
     <img src="https://img.shields.io/badge/%3C%2F%3E%20with%20%E2%9D%A4%20by-Dyne.org-blue.svg" alt="Dyne.org">
   </a>
@@ -45,7 +42,7 @@
 </h4>
 
 
-Abstract description like: 🚧 Zenroom is a software in **ALPHA stage** and are part of the [DECODE project](https://decodeproject.eu) about data-ownership and [technological sovereignty](https://www.youtube.com/watch?v=RvBRbwBm_nQ). Our effort is that of improving people's awareness of how their data is processed by algorithms, as well facilitate the work of developers to create along [privacy by design principles](https://decodeproject.eu/publications/privacy-design-strategies-decode-architecture) using algorithms that can be deployed in any situation without any change.
+**Zenbridge is a microservice architecture for multi-DLT systems**. Zenbridge is part of the [European Blockchain Services Infrastructure (EBSI)](https://ec.europa.eu/cefdigital/wiki/display/CEFDIGITAL/EBSI). Our effort is to leverage blockchain to the creation of cross-border services for public administrations and their ecosystems to verify information and make services trustworthy by improving people's awareness of how their data is processed by algorithms, as well facilitate the work of developers to create along [privacy by design principles](https://decodeproject.eu/publications/privacy-design-strategies-decode-architecture) using algorithms that can be deployed in any situation without any change.
 
 
 <details id="toc">
@@ -66,20 +63,20 @@ Abstract description like: 🚧 Zenroom is a software in **ALPHA stage** and are
 
 ***
 ## 💾 Install
-```pip install / yard add {project_name}```
+```pip install / yard add Zenbridge```
 
 
 ***
 ## 🎮 Quick start
 
-To start using {project_name} just (fill with real documentation)
+To start using Zenbridge just (fill with real documentation)
 
 ***
 ## 🐋 Docker
 
 ```bash
-docker build -t {project_name} .
-docker run --rm -it {project_name}
+docker build -t Zenbridge .
+docker run --rm -it Zenbridge
 ```
 
 **[🔝 back to top](#toc)**
@@ -114,14 +111,17 @@ Copyleft (ɔ) 2021 by [Dyne.org](https://www.dyne.org) foundation, Amsterdam
 
 Designed, written and maintained by Puria Nafisi Azizi.
 
-Special thanks to Mr. W. White for his special contributions.
+Consortium composed by [Dyne.org](Dyne.org), [RIDDLE&CODE](https://www.riddleandcode.com/) & [Infocert](https://www.infocert.it/)
+
+<img src="https://ec.europa.eu/cefdigital/wiki/download/attachments/289112547/logo-cef-digital-2021.png" width="310" alt="Project funded by the European Commission">
+This project is receiving funding from the European Union’s as contractor that is participating in the European Blockchain Pre-Commercial Procurement (PCP) under Framework Contract no FW00110987. The European Blockchain PCP aims to prepare for the future evolution of the European Blockchain Service Infrastructure (EBSI). 
 
 **[🔝 back to top](#toc)**
 
 ***
 ## 🌐 Links
 
-https://www.somelink.io/
+https://ec.europa.eu/cefdigital/wiki/display/CEFDIGITAL/ebsi
 
 https://dyne.org/
 
@@ -136,7 +136,7 @@ Please first take a look at the [Dyne.org - Contributor License Agreement](CONTR
 2.  Create your feature branch `git checkout -b feature/branch`
 3.  Commit your changes `git commit -am 'Add some fooBar'`
 4.  Push to the branch `git push origin feature/branch`
-5.  Create a new Pull Request
+5.  Create a new Pull Request `gh pr create -f`
 6.  🙏 Thank you
 
 
@@ -144,7 +144,7 @@ Please first take a look at the [Dyne.org - Contributor License Agreement](CONTR
 
 ***
 ## 💼 License
-    {project_name} - {tagline}
+    Zenbridge diagrams - Architectural docs for the project
     Copyleft (ɔ) 2021 Dyne.org foundation, Amsterdam
 
     This program is free software: you can redistribute it and/or modify
