@@ -17,7 +17,7 @@ workspace "Zenbridge" {
     views {
         systemContext vm {
             include *
-            autolayout
+            autolayout lr
         }
 
         theme default
