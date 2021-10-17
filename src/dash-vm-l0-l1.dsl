@@ -1,17 +1,20 @@
 workspace "Zenbridge" {
 
     model {
-        l0 = softwareSystem "Ledger 0"
-        vm = softwareSystem "VM-Lets"
-        l1 = softwareSystem "Ledger 1"
-        api = softwareSystem "Dashboard"
+        enterprise Zenbridge {
+            group EBSI {
+            l0 = softwareSystem "Ledger 0"
+            vm = softwareSystem "VM-Lets"
+            api = softwareSystem "Dashboard"
+            }
+            l1 = softwareSystem "Ledger 1"
 
-        vm -> l1
-        vm -> l0
-        l1 -> vm
-        api -> vm "Schedule"
-        api -> vm "Execute"
-
+            vm -> l1
+            vm -> l0 "Knows the last transaction at a given timestamp"
+            l1 -> vm
+            api -> vm "Schedule"
+            api -> vm "Execute"
+        }
     }
 
     views {
