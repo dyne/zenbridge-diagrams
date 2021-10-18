@@ -32,6 +32,8 @@
 
 **Zenbridge is a microservice architecture for multi-DLT systems**. Zenbridge is part of the [European Blockchain Services Infrastructure (EBSI)](https://ec.europa.eu/cefdigital/wiki/display/CEFDIGITAL/EBSI). Our effort is to leverage blockchain to the creation of cross-border services for public administrations and their ecosystems to verify information and make services trustworthy by improving people's awareness of how their data is processed by algorithms, as well facilitate the work of developers to create along [privacy by design principles](https://decodeproject.eu/publications/privacy-design-strategies-decode-architecture) using algorithms that can be deployed in any situation without any change.
 
+This repo contains the architectural diagrams for Zenbridge, following the [C4 model](https://c4model.com/) is a lean graphical notation technique for modelling the architecture of software systems composed by visualising software architecture Context, Containers, Components, and Code. It is based on a structural decomposition of a system into containers and components and relies on existing modelling techniques such as the Unified Modelling Language (UML) or Entity Relation Diagrams (ERD) for the more detailed decomposition of the architectural building blocks.
+
 
 <details id="toc">
  <summary><strong>🚩 Table of Contents</strong> (click to expand)</summary>
