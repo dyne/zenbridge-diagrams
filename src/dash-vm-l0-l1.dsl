@@ -37,10 +37,15 @@ workspace "Zenbridge" {
                     }
             }
 
-            group EBSI {
                 operator = person "Operator"
                 customer = person "Customer"
-                manifacturer = person "Manifacturer"
+                manifacturer = person "Manifacturer" {
+                    tags "Manifacturer"
+                }
+                devices = person "Devices" {
+                    tags "Devices"
+                }
+            group EBSI {
 
                 l0 = softwareSystem "Ledger 0" "Stores only the latest block hash (head) of the blockchains"
                 vm = softwareSystem "VM-Lets" "Programmable and scalable execution unit" {
@@ -64,6 +69,8 @@ workspace "Zenbridge" {
                 }
             }
 
+            manifacturer -> vm
+            devices -> vm
             vm -> l1
             vm -> l0 "Stores/Retrieve only the latest block hash (head) of the blockchains at a given timestamp"
             l1 -> vm
@@ -211,6 +218,14 @@ workspace "Zenbridge" {
 
             element "Dashboard" {
                 shape "WebBrowser" 
+            }
+
+            element "Manifacturer" {
+                shape "Robot"
+            }
+
+            element "Devices" {
+                shape "MobileDevicePortrait"
             }
 
             relationship "Relationship" {
