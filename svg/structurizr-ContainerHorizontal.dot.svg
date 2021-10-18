@@ -10,28 +10,28 @@
 <polygon fill="white" stroke="transparent" points="-4,4 -4,-637 342,-637 342,4 -4,4"/>
 <text text-anchor="start" x="8" y="-11.8" font-family="Arial" font-size="34.00">VM&#45;Lets &#45; Containers</text>
 <g id="clust1" class="cluster">
-<title>cluster_6</title>
+<title>cluster_12</title>
 <polygon fill="none" stroke="#444444" points="26,-64 26,-625 312,-625 312,-64 26,-64"/>
 <text text-anchor="start" x="124" y="-92.8" font-family="Arial" font-size="24.00" fill="#444444">VM&#45;Lets</text>
 <text text-anchor="start" x="91.5" y="-72.8" font-family="Arial" font-size="19.00" fill="#444444">[Software System]</text>
 </g>
-<!-- 7 -->
-<g id="7" class="node">
-<title>7</title>
+<!-- 13 -->
+<g id="13" class="node">
+<title>13</title>
 <polygon fill="#438dd5" stroke="#2e6295" points="266.5,-599.5 71.5,-599.5 71.5,-502.5 266.5,-502.5 266.5,-599.5"/>
 <text text-anchor="start" x="100.5" y="-551.3" font-family="Arial" font-size="34.00" fill="#ffffff">Zenroom</text>
 <text text-anchor="start" x="122.5" y="-529.3" font-family="Arial" font-size="19.00" fill="#ffffff">[Container]</text>
 </g>
-<!-- 8 -->
-<g id="8" class="node">
-<title>8</title>
+<!-- 14 -->
+<g id="14" class="node">
+<title>14</title>
 <polygon fill="#438dd5" stroke="#2e6295" points="268,-430.5 70,-430.5 70,-333.5 268,-333.5 268,-430.5"/>
 <text text-anchor="start" x="99" y="-382.3" font-family="Arial" font-size="34.00" fill="#ffffff">Tarantool</text>
 <text text-anchor="start" x="122.5" y="-360.3" font-family="Arial" font-size="19.00" fill="#ffffff">[Container]</text>
 </g>
-<!-- 9 -->
-<g id="9" class="node">
-<title>9</title>
+<!-- 15 -->
+<g id="15" class="node">
+<title>15</title>
 <polygon fill="#438dd5" stroke="#2e6295" points="287,-261.5 51,-261.5 51,-164.5 287,-164.5 287,-261.5"/>
 <text text-anchor="start" x="80" y="-213.3" font-family="Arial" font-size="34.00" fill="#ffffff">BigchainDB</text>
 <text text-anchor="start" x="122.5" y="-191.3" font-family="Arial" font-size="19.00" fill="#ffffff">[Container]</text>

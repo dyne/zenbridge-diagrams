@@ -4,6 +4,39 @@ workspace "Zenbridge" {
         enterprise Zenbridge {
             l1 = softwareSystem "Ledger 1" 
 
+            consensus = softwareSystem "Consensus Operator" {
+                    container "Zenroom" {
+                        tags "zen"
+                    }
+                    container "Tarantool" {
+                        tags "tt"
+                    }
+                    container "Tendermint" {
+                        tags "tm"
+                    }
+            }
+
+            cache = softwareSystem "Cache operator" {
+               container "Tarantool" {
+                        tags "tt"
+                    } 
+            }
+
+            smoperator = softwareSystem "Smart Contract Operator" {
+                    container "Zenroom" {
+                        tags "zen"
+                    }
+                     container "Tarantool" {
+                        tags "tt"
+                    }
+                     container "BigchainDB" {
+                        tags "bdb"
+                         component "Tendermint" {
+                             tags "tm"
+                         }
+                    }
+            }
+
             group EBSI {
                 operator = person "Operator"
                 customer = person "Customer"
@@ -19,7 +52,9 @@ workspace "Zenbridge" {
                     }
                     bigchaindb = container "BigchainDB" {
                         tags "bdb"
-                        tendermint = component "Tendermint"
+                        tendermint = component "Tendermint" {
+                            tags "tm"
+                        }
                     }
                 }
                 
@@ -42,7 +77,6 @@ workspace "Zenbridge" {
                     softwareSystemInstance l1
                 }
                 
-                sdn = deploymentNode "Service Delivery Network" {
                     vmnodes = deploymentNode "VM-Lets" "" "" "" 5 {
                         containerInstance zenroom
                         containerInstance tarantool
@@ -52,10 +86,10 @@ workspace "Zenbridge" {
                     c0 = deploymentNode "L0" {
                         softwareSystemInstance l0
                     }
-                }
+                
             }
 
-            sdn -> c1
+            vmnodes -> c1
             vmnodes -> c0
         }
 
@@ -64,22 +98,29 @@ workspace "Zenbridge" {
                 lc1 = deploymentNode "L1" {
                     softwareSystemInstance l1
                 }
-                
-                lsdn = deploymentNode "Service Delivery Network" {
-                    lvmnodes = deploymentNode "VM-Lets" "" "Two nodes per EU country" "" 50 {
-                        containerInstance zenroom
-                        containerInstance tarantool
-                        containerInstance bigchaindb
-                    }
 
-                    lc0 = deploymentNode "L0" {
-                        softwareSystemInstance l0
-                    }
+                lvmnodes = deploymentNode "VM-Lets" "" "Two nodes per EU country" "" 50 {
+                    containerInstance zenroom
+                    containerInstance tarantool
+                    containerInstance bigchaindb
+                }
+
+                lsdn = deploymentNode "Service Delivery Network" {
+
+
+                    caching = deploymentNode "Caching operators" "" "" "" 50 {
+                        containerInstance tarantool
+                    } 
+                }
+
+                lc0 = deploymentNode "L0" {
+                    softwareSystemInstance l0
                 }
             }
 
+            lvmnodes -> caching
+            lsdn -> lc0
             lsdn -> lc1
-            lvmnodes -> lc0
         }
     }
 
@@ -100,6 +141,21 @@ workspace "Zenbridge" {
             include *
             autolayout lr
         }        
+
+        container smoperator "SmartContractOperator" {
+            include *
+            autolayout tb
+        }
+
+        container cache "CacheOperator" {
+            include *
+            autolayout tb    
+        }
+
+        container consensus "ConsensusOperator" {
+            include *
+            autolayout tb      
+        }
 
         container vm "ContainerVertical" {
             include *
@@ -133,7 +189,7 @@ workspace "Zenbridge" {
         deployment vm phase2b {
             title "Phase 2B Topology"
             include *
-            autoLayout         
+            autoLayout       
         }
 
         styles {
@@ -147,6 +203,10 @@ workspace "Zenbridge" {
 
             element "bdb" {
                 icon "https://www.solvewithvia.com/wp-content/uploads/2018/09/BigchainDB-no-bleed-full-colour-logo-5-1.png"
+            }
+
+            element "tm" {
+                icon "https://v1.cosmos.network/images/logos/tendermint-logo-black.png"
             }
 
             element "Dashboard" {
