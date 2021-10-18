@@ -18,19 +18,7 @@
 <br><br>
 
 <h4 align="center">
-  <a href="#-install">💾 Install</a>
-  <span> • </span>
   <a href="#-quick-start">🎮 Quick start</a>
-  <span> • </span>
-  <a href="#-docker">🐋 Docker</a>
-  <span> • </span>
-  <a href="#-api">🐝 API</a>
-  <span> • </span>
-  <a href="#-configuration">🔧 Configuration</a>
-  <span> • </span>
-  <a href="#-testing">📋 Testing</a>
-  <span> • </span>
-  <a href="#-troubleshooting--debugging">🐛 Troubleshooting & debugging</a>
   <span> • </span>
   <a href="#-acknowledgements">😍 Acknowledgements</a>
   <span> • </span>
@@ -48,59 +36,22 @@
 <details id="toc">
  <summary><strong>🚩 Table of Contents</strong> (click to expand)</summary>
 
-* [Install](#-install)
 * [Quick start](#-quick-start)
-* [Docker](#-docker)
-* [API](#-api)
-* [Configuration](#-configuration)
-* [Testing](#-testing)
-* [Troubleshooting & debugging](#-troubleshooting--debugging)
 * [Acknowledgements](#-acknowledgements)
 * [Links](#-links)
 * [Contributing](#-contributing)
 * [License](#-license)
 </details>
 
-***
-## 💾 Install
-```pip install / yard add Zenbridge```
-
 
 ***
 ## 🎮 Quick start
 
-To start using Zenbridge just (fill with real documentation)
-
-***
-## 🐋 Docker
-
-```bash
-docker build -t Zenbridge .
-docker run --rm -it Zenbridge
+To start render diagrams use [just](https://github.com/casey/just) making tool by run:
 ```
-
-**[🔝 back to top](#toc)**
-
-***
-## 🐝 API
-
-**[🔝 back to top](#toc)**
-
-***
-## 🔧 Configuration
-
-**[🔝 back to top](#toc)**
-
-***
-
-## 📋 Testing
-
-**[🔝 back to top](#toc)**
-
-***
-## 🐛 Troubleshooting & debugging
-
-**[🔝 back to top](#toc)**
+just
+```
+This will export to .dot `graphviz` files and generated rendered `svg` files in the svg folder
 
 ***
 ## 😍 Acknowledgements
