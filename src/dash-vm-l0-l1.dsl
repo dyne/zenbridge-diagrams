@@ -9,7 +9,7 @@ workspace "Zenbridge" {
                 customer = person "Customer"
                 manifacturer = person "Manifacturer"
 
-                l0 = softwareSystem "Ledger 0"
+                l0 = softwareSystem "Ledger 0" "Stores only the latest block hash (head) of the blockchains"
                 vm = softwareSystem "VM-Lets" "Programmable and scalable execution unit" {
                     zenroom = container "Zenroom" {
                         tags "zen"
@@ -30,7 +30,7 @@ workspace "Zenbridge" {
             }
 
             vm -> l1
-            vm -> l0 "Retrives the last transaction at a given timestamp"
+            vm -> l0 "Stores/Retrieve only the latest block hash (head) of the blockchains at a given timestamp"
             l1 -> vm
             api -> vm "Schedule"
             api -> vm "Execute"
@@ -60,7 +60,7 @@ workspace "Zenbridge" {
         }
 
         phase2b = deploymentEnvironment "Phase 2B" {
-            deploymentNode "EPIC" {
+            deploymentNode "EPIC" "Experimental Platform for Internet Contingencies" {
                 lc1 = deploymentNode "L1" {
                     softwareSystemInstance l1
                 }
